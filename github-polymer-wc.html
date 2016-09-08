@@ -59,7 +59,7 @@ Example:
       },
 
       _fetchUser() {
-        if(!this.username) return;
+        if(!this.username || !this.username.length) return;
         fetch('https://api.github.com/users/' + this.username)
           .then(res => res.json())
           .then(function (data){
